@@ -2,7 +2,6 @@ let express = require('express');
 let app = express();
 let wordRepo = require('./wordsRepo.js');
 let cors = require('cors');
-let sass = require('node-sass');
 let router = express.Router();
 
 // Configure middleware to support JSON data
