@@ -1,0 +1,19 @@
+{
+  "name": "voila",
+  "version": "1.0.0",
+  "description": "A practice project that also helps me practice french",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apdsrocha/voila.git"
+  },
+  "author": "Ana Paula Rocha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apdsrocha/voila/issues"
+  },
+  "homepage": "https://github.com/apdsrocha/voila#readme"
+}
