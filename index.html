@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <script src="js/index.js" type="module" defer></script>
   <title>Voilá</title>
 </head>
 <body class="container">
@@ -30,13 +31,15 @@
       <label class="form__input--caption" >Busque por palavras francesas:</label>
       <div class="form--search ">
         <input class="form__input" type="text" placeholder="ex: cherche">
-        <button class="form__button--search">Busca<img src="" /></button>
+        <button aria-label="buscar" class="form__button--search"><img alt="" src="/img/icon-search.png" /></button>
       </div>
     </fieldset>
   </section>  
-  <section data-body="cards">
+  <section class="cards"data-body="cards">
 
   </section>
-  <footer>Voilá 2022</footer>
+  <footer class="footer">
+    <address class="footer__text">Voilá 2022 | Av. Paulista 1578</address>
+  </footer>
 </body>
 </html>
