@@ -2,9 +2,9 @@
   "name": "voila",
   "version": "1.0.0",
   "description": "A practice project that also helps me practice french",
-  "main": "index.js",
+  "main": "/api/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon api/server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/apdsrocha/voila/issues"
   },
-  "homepage": "https://github.com/apdsrocha/voila#readme"
+  "homepage": "https://github.com/apdsrocha/voila#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "rerun-script": "^0.6.0"
+  }
 }
