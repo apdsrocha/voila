@@ -2,7 +2,7 @@
 import { getListofWords } from "../controller/WordController.js"
 
 const divCards = document.querySelector('[data-body="cards"]');
-console.log(divCards)
+
 showCards();
 export async function showCards()
 {
