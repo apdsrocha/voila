@@ -21,3 +21,21 @@ export async function saveWord(newWord)
     
     return statusServer;
 }
+
+export async function deleteWord(id) 
+{
+  const parameters = new URLSearchParams();
+  parameters.append('id', id);
+
+  const resposta = await fetch(URL_BASE  + parameters, {
+    method: 'DELETE',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+  });
+  const statusServer = await resposta.json();
+  return statusServer;
+
+}
+
