@@ -81,7 +81,7 @@ router.post('/', function(req,res,next) {
   })
 })
 
-router.delete('/:id', function(req,res,next) {
+router.delete('/id=:id', function(req,res,next) {
   wordRepo.getByID(req.params.id, function(data) {
     if(data) {
       //attempt delete
@@ -93,7 +93,7 @@ router.delete('/:id', function(req,res,next) {
         })
       })
     } else {
-      req.status(404).json({
+      res.status(404).json({
         "status": 404,
         "statusText" : "Not deleted",
         "message" : "The word was not deleted",
