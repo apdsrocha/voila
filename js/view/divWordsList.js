@@ -1,5 +1,5 @@
 
-import { getListofWords } from "../controller/WordController.js"
+import { getListofWords, eraseCard } from "../controller/WordController.js"
 
 const divCards = document.querySelector('[data-body="cards"]');
 
@@ -13,7 +13,9 @@ export async function showCards()
     {
       card += `
             <div class="cards__single-card">
-                <span data-id="${word.id}">DEL</span>
+                <button  class="cards__btn--delete">
+                  <img data-id="${word.id}" class="cards__btn--delete-img" src="../img/icon-trash.png" alt="deletar">
+                </button>
                 <div class="cards__single-card--FRtxt">
                   <p class="cards__single-card--txt">
                     <span class="cards__single-card--small">FR</span>
@@ -30,4 +32,15 @@ export async function showCards()
         `;
     }
     divCards.innerHTML = card;
+    let deleteBtns = document.querySelectorAll('[data-id]');
+    let arrayOfBtns = Array.from(deleteBtns);
+    arrayOfBtns.map(btn => btn.addEventListener( "click", deleteCard));
+}
+
+export async function deleteCard(event) {   
+  let id = event.target.dataset.id
+  if(confirm("Quer mesmo deletar palavra?")) {
+    await eraseCard(id);
+    await showCards();
+  };
 }
