@@ -102,13 +102,21 @@ body {
   align-items: center;
 }
 .cards {
-  max-width: 1200px;
+  max-width: 1560px;
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
+.cards__btn--delete {
+  float: right;
+  padding: 10px;
+}
+.cards__btn--delete-img {
+  width: 15px;
+}
+
 .cards__single-card {
-  width: 398px;
+  width: 375px;
   height: 210px;
   margin: 10px 10px 0 0;
   background: #ffffff 0% 0% no-repeat padding-box;
@@ -132,7 +140,7 @@ body {
   padding-right: 15px;
 }
 .cards__single-card--PTtxt {
-  width: 335px;
+  width: 315px;
   height: 85px;
   background: #fcefec 0% 0% no-repeat padding-box;
   border-radius: 12px;
