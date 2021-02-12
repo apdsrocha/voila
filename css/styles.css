@@ -38,12 +38,23 @@ body {
   top: 130px;
   left: 230px;
 }
+@media only screen and (max-width: 600px) {
+  .header__title {
+    left: 165px;
+  }
+}
 .header__subtitle {
   font: bold 2.375em "Raleway";
   color: #6c1b71;
   position: absolute;
   top: 195px;
   left: 250px;
+}
+@media only screen and (max-width: 600px) {
+  .header__subtitle {
+    font-size: 1.375em;
+    left: 230px;
+  }
 }
 .form {
   display: flex;
@@ -54,11 +65,25 @@ body {
   display: flex;
   align-items: flex-end;
 }
+@media only screen and (max-width: 600px) {
+  .form--add {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .form--add-input {
   display: flex;
   flex-direction: column;
   max-width: 400px;
   margin-right: 15px;
+}
+@media only screen and (max-width: 600px) {
+  .form--add-input {
+    padding: 20px 0;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
 }
 .form--search {
   display: flex;
@@ -163,4 +188,17 @@ body {
 .footer__text {
   text-align: center;
   padding-top: 50px;
+}
+.fadein {
+  transition-timing-function: ease-in;
+  animation: fadein 0.8s;
+  animation-fill-mode: forwards;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
