@@ -29,8 +29,14 @@ let wordRepo = {
       } else {
         let words = JSON.parse(data);
         if(searchObject) {
+          // Example of search object
+          // let searchObject = {
+          //  "id" : 1,
+          //  "search" : 'A'
+          //};
           words = words.filter(
-            w => searchObject.search ? w.wordFR.toLowerCase().indexOf(searchObject.search.toLowerCase()) >= 0: true
+            w => (searchObject.id ? w.id == searchObject.id : true) &&
+            (searchObject.search ? w.wordFR.toLowerCase().indexOf(searchObject.search.toLowerCase()) >= 0: true)
           )
         }
         resolve(words)
