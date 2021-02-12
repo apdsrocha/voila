@@ -1,37 +1,32 @@
-import * as WordController from '../controller/WordController.js';
-import { deleteCard } from './divWordsList.js';
+import * as WordController from "../controller/WordController.js";
+import { deleteCard } from "./divWordsList.js";
 
-const btnSearch = document.querySelector('#btn-search');
-const inputSearch = document.querySelector('#input-search');
+const btnSearch = document.querySelector("#btn-search");
+const inputSearch = document.querySelector("#input-search");
 
-btnSearch.addEventListener('click', async function() {
-  try 
-  {
+btnSearch.addEventListener("click", async function () {
+  try {
     let searchedWord = {
-      'search': inputSearch.value
-    } 
-    
+      search: inputSearch.value,
+    };
+
     let searchResult = await WordController.searchWord(searchedWord);
-     showSearch(searchResult.data)
-     inputSearch.value = '';
-  }
-  catch(erro) 
-  { 
-    alert('Um erro inesperado ocorreu ao buscar. Por favor, contate o administrador!');
+    showSearch(searchResult.data);
+    inputSearch.value = "";
+  } catch (erro) {
+    alert(
+      "Um erro inesperado ocorreu ao buscar. Por favor, contate o administrador!"
+    );
   }
 });
 
-
 const divCards = document.querySelector('[data-body="cards"]');
 
+export async function showSearch(searchResult) {
+  let card = "";
 
-export async function showSearch(searchResult)
-{
-    let card = '';
-
-    for (let result of searchResult)
-    {
-      card += `
+  for (let result of searchResult) {
+    card += `
             <div class="cards__single-card fadein">
                 <button  class="cards__btn--delete">
                   <img data-id="${result.id}" class="cards__btn--delete-img" src="../img/icon-trash.png" alt="deletar">
@@ -50,9 +45,9 @@ export async function showSearch(searchResult)
                 </div>
             </div>
         `;
-    }
-    divCards.innerHTML = card;
-    let deleteBtns = document.querySelectorAll('[data-id]');
-    let arrayOfBtns = Array.from(deleteBtns);
-    arrayOfBtns.map(btn => btn.addEventListener( "click", deleteCard));
+  }
+  divCards.innerHTML = card;
+  let deleteBtns = document.querySelectorAll("[data-id]");
+  let arrayOfBtns = Array.from(deleteBtns);
+  arrayOfBtns.map((btn) => btn.addEventListener("click", deleteCard));
 }
