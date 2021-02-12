@@ -1,45 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <script src="js/index.js" type="module" defer></script>
-  <title>Voilá</title>
-</head>
-<body class="container">
-  <header class="header">
-    <h1 class="header__title">Voilá</h1>
-    <h2 class="header__subtitle">Vocabulário evoluindo</h2>
-  </header>
-  <section>
-    <fieldset class="form--add" >
-      <legend class="form__title">Adicione palavras</legend>
-      <div class="form--add-input">
-        <label class="form__input--caption">Palavra em francês</label>
-        <input id="input-wordFR" required class="form__input" type="text" placeholder="ex: voilá">
-      </div>
-      <div class="form--add-input">
-        <label class="form__input--caption" >Significado em português</label>
-        <input id="input-wordBR" required class="form__input" type="text" placeholder="ex: aqui está">
-      </div>
-      <button id="btn-save" class="form__button">SALVAR</button>
-    </fieldset>
-  </section>
-  <section>
-    <fieldset class="form">
-      <label class="form__input--caption" >Busque por palavras francesas:</label>
-      <div class="form--search ">
-        <input id="input-search" class="form__input" type="text" placeholder="ex: cherche">
-        <button id="btn-search" aria-label="buscar" class="form__button--search"><img alt="" src="/img/icon-search.png" /></button>
-      </div>
-    </fieldset>
-  </section>  
-  <section class="cards"data-body="cards">
-
-  </section>
-  <footer class="footer">
-    <address class="footer__text">Voilá 2022 | Av. Paulista 1578</address>
-  </footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <script src="js/index.js" type="module" defer></script>
+    <title>Voilá</title>
+  </head>
+  <body class="container">
+    <header class="header">
+      <h1 class="header__title">Voilá</h1>
+      <h2 class="header__subtitle">Vocabulário evoluindo</h2>
+    </header>
+    <section>
+      <fieldset class="form--add">
+        <legend class="form__title">Adicione palavras</legend>
+        <div class="form--add-input">
+          <label class="form__input--caption">Palavra em francês</label>
+          <input
+            id="input-wordFR"
+            required
+            class="form__input"
+            type="text"
+            placeholder="ex: voilá"
+          />
+        </div>
+        <div class="form--add-input">
+          <label class="form__input--caption">Significado em português</label>
+          <input
+            id="input-wordBR"
+            required
+            class="form__input"
+            type="text"
+            placeholder="ex: aqui está"
+          />
+        </div>
+        <button id="btn-save" class="form__button">SALVAR</button>
+      </fieldset>
+    </section>
+    <section>
+      <fieldset class="form">
+        <label class="form__input--caption"
+          >Busque por palavras francesas:</label
+        >
+        <div class="form--search">
+          <input
+            id="input-search"
+            class="form__input"
+            type="text"
+            placeholder="ex: cherche"
+          />
+          <button
+            id="btn-search"
+            aria-label="buscar"
+            class="form__button--search"
+          >
+            <img alt="" src="/img/icon-search.png" />
+          </button>
+        </div>
+      </fieldset>
+    </section>
+    <section class="cards" data-body="cards"></section>
+    <footer class="footer">
+      <address class="footer__text">Voilá 2022 | Av. Paulista 1578</address>
+    </footer>
+  </body>
 </html>
