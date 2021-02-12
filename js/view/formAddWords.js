@@ -14,6 +14,8 @@ btnSave.addEventListener('click', async function() {
     }    
       await WordController.sendWord(formAnswers);
       await showCards();
+      inputFR.value = '';
+      inputBR.value = '';
   }
   catch(erro) 
   { 
