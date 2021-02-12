@@ -19,6 +19,6 @@ btnSave.addEventListener('click', async function() {
   }
   catch(erro) 
   { 
-    alert('Um erro inesperado ocorreu ao adicionar um produto ao seu pedido. Por favor, contate o administrador!');
+    alert('Um erro inesperado ocorreu ao adicionar uma palava. Por favor, contate o administrador!');
   }
 });
