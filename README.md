@@ -2,7 +2,7 @@
 
 # Voilá &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE)
 
-> A practice project in JS that also helps me improve my french
+> A practice project in JS that also helps me improve my french. The idea is to be able to store cue cards with the word in Portuguese and French. It should also be able to search words.
 
 My ideia was to play around a little with Node/Express (no databases for me yet, sorry, it's just a lazy JSON file persisting the data) while also trying to build a project around MVC principles and exercise JavaScript.
 
