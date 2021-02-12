@@ -39,3 +39,19 @@ export async function deleteWord(id)
 
 }
 
+export async function retrieveWord(searchedTerm) 
+{
+  console.log(searchedTerm.search)
+  const parameters = new URLSearchParams();
+  parameters.append('search', searchedTerm.search);
+
+  const resposta = await fetch(URL_BASE +'/search/' + '?' + parameters, {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+  });
+  const statusServer = await resposta.json();
+  return statusServer;
+}
