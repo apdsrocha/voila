@@ -6,13 +6,15 @@ const divCards = document.querySelector('[data-body="cards"]');
 showCards();
 export async function showCards()
 {
-    const wordList = await getListofWords();
+  const wordList = await getListofWords();
     let card = '';
+    let cardsArray = [];
+    let cardsHtml = '';
 
     for (let word of wordList)
     {
-      card += `
-            <div class="cards__single-card">
+      card = `
+            <div class="cards__single-card fadein">
                 <button  class="cards__btn--delete">
                   <img data-id="${word.id}" class="cards__btn--delete-img" src="../img/icon-trash.png" alt="deletar">
                 </button>
@@ -30,8 +32,11 @@ export async function showCards()
                 </div>
             </div>
         `;
+        cardsArray.push(card);
     }
-    divCards.innerHTML = card;
+    cardsArray.slice(0).reverse().map(item => cardsHtml += item );
+    
+    divCards.innerHTML = cardsHtml;
     let deleteBtns = document.querySelectorAll('[data-id]');
     let arrayOfBtns = Array.from(deleteBtns);
     arrayOfBtns.map(btn => btn.addEventListener( "click", deleteCard));
