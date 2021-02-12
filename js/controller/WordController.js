@@ -1,5 +1,5 @@
 import Word from "../model/Word.js";
-import { getWords, saveWord, deleteWord } from "../services/WordsService.js";
+import { getWords, saveWord, deleteWord, retrieveWord } from "../services/WordsService.js";
 
 export async function getListofWords()
 {
@@ -32,4 +32,11 @@ export async function eraseCard(id)
 {
     const wordsInServer = await deleteWord(id);
     return wordsInServer
+}
+
+
+export async function searchWord(formSearch)
+{
+    const wordSearch = await retrieveWord(formSearch);
+    return wordSearch
 }
