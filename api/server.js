@@ -27,6 +27,7 @@ router.get('/', function(req,res,next) {
 // GET by search
 router.get('/search', function(req, res, next) {
   let searchObject = { 
+    "id" : req.query.id,
     "search": req.query.search
   };
 
@@ -34,7 +35,7 @@ router.get('/search', function(req, res, next) {
     res.status(200).json({
       "status": 200,
       "statusText": "OK",
-      "message": "Words retrieved",
+      "message": "Matching words retrieved",
       "data": data
     });
   }, function(err){
