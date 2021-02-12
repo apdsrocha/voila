@@ -7,11 +7,11 @@ export async function getListofWords()
     return wordsInServer
 }
 
-export async function sendWord(formProduto)
+export async function sendWord(form)
 {
     const word = new Word();
-    word.wordPT = formProduto.wordPT;
-    word.wordFR = formProduto.wordFR;
+    word.wordPT = form.wordPT;
+    word.wordFR = form.wordFR;
 
     let allWords = await getListofWords();
 
