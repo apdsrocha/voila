@@ -1,4 +1,4 @@
-![Logo of the project](./img/logo-bg.png)
+![Logo of the project](./img/logo-small.png)
 
 # Voilá &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE)
 
